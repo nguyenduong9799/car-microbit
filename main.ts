@@ -1,7 +1,7 @@
-bluetooth.onBluetoothConnected(function () {
+bluetooth.onBluetoothConnected(function on_bluetooth_connected() {
     basic.showIcon(IconNames.Happy)
 })
-control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EVT_ANY, function () {
+control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EVT_ANY, function on_mes_dpad_controller_id_microbit_evt() {
     if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_1_DOWN) {
         basic.showArrow(ArrowNames.North)
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_2_DOWN) {
@@ -21,4 +21,5 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EV
     } else {
         basic.showIcon(IconNames.SmallHeart)
     }
+    
 })
